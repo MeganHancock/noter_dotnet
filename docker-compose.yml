@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/noter_dotnet:latest
+    restart: unless-stopped
+    env_file:
+      - noter_dotnet-env
+    ports:
+      - "7045:80"
